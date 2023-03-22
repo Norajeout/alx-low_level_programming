@@ -17,6 +17,7 @@ int r, c, d;
 
 for (r = 0; r <= 9; r++)
 {
+_putchar('0');
 for (c = 1; c <= 9; c++)
 {
 d = (r * c);
@@ -38,8 +39,5 @@ _putchar((d % 10) + '0');
 else
 {
 _putchar((d % 10) + '0');
-}
-}
-_putchar('\n');
 }
 }
