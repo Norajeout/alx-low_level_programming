@@ -1,25 +1,19 @@
 #include "main.h"
-
 /**
- * _strchr - a function that return a  pointer to the first
- *occurrence of the character
- * @s: pointer variable
- * @c: variable need to look at
- * Return: Always *s (Success)
+ * _strchr - Entry point
+ * @s: input
+ * @c: input
+ * Return: Always 0 (Success)
  */
-
 char *_strchr(char *s, char c)
 {
-	int n = 0;
+	int i = 0;
 
-	while (s[n] != '\0')
+	for (; s[i] >= '\0'; i++)
 	{
-		if (s[n] == c)
-		{
-			break;
-		}
-		n++;
+		if (s[i] == c)
+			return (&s[i]);
 	}
-
-	return (&s[n]);
+	return (0);
 }
+
