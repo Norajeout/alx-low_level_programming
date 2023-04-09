@@ -1,5 +1,4 @@
 #include "main.h"
-/* by nora jeout */
 /**
  * _strspn - Entry point
  * @s: input
@@ -10,7 +9,6 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int n = 0;
 	int r;
-
 
 	while (*s)
 	{
