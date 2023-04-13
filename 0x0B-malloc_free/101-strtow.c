@@ -4,6 +4,12 @@
 #include <stdlib.h>
 int count_the_fucking_word(char *s);
 /* by nora jeout */
+/**
+* **strtow - Entry point
+* @str: variable
+* by: laila tabourit
+* Return: pointer if Success, and NULL if Not
+*/
 char **strtow(char *str)
 {
 	char **twodim, *onedim;
