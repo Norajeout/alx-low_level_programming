@@ -1,24 +1,26 @@
-#ifndef __LISTS_H
-#define __LISTS_H
-
-#include <string.h>
-#include <stdlib.h>
-#include <stdio.h>
-
 #include "lists.h"
-
 /**
-* print_dlistint - print dbl linked list
-* @h: list
-* Return: nodes
-*/
-
+ * print_dlistint - prints all the elements of a list
+ * @h: head of the list
+ * Return: the number of nodes
+ */
 size_t print_dlistint(const dlistint_t *h)
 {
-	size_t nod = 0;
+	int cmp;
 
-	for (; h; nod++, h = h->next)
+	cmp = 0;
+
+	if (h == NULL)
+		return (cmp);
+
+	while (h->prev != NULL)
+		h = h->prev;
+
+	while (h != NULL)
+	{
 		printf("%d\n", h->n);
-
-	return (nod);
+		cmp++;
+		h = h->next;
+	}
+	return (cmp);
 }
